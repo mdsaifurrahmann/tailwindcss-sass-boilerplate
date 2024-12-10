@@ -56,12 +56,19 @@ function browserSyncInit(done) {
 function watchFiles(done) {
     gulp.watch('src/scss/**/*.scss', compileSass);
     gulp.watch('src/js/**/*.js', compileJs);
+    gulp.watch('src/assets/**/*', copyAssets);
     gulp.watch('./*.html').on('change', browserSync.reload);
     done();
 }
 
+// Copy assets
+function copyAssets() {
+    return gulp.src('src/assets/**/*') // Match all files and folders under src/assets
+        .pipe(gulp.dest('public/assets')); // Output to public/assets
+}
+
 // Define complex tasks
-const build = gulp.series(compileSass, compileJs);
+const build = gulp.series(compileSass, compileJs, copyAssets);
 const watch = gulp.parallel(watchFiles, browserSyncInit);
 
 // Export tasks
@@ -70,3 +77,4 @@ exports.js = compileJs;
 exports.build = build;
 exports.watch = watch;
 exports.default = gulp.series(build, watch);
+exports.assets = copyAssets;
