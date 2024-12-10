@@ -55,7 +55,11 @@ Before using this boilerplate, ensure you have the following installed:
 │   ├── assets      # Processed assets
 │   ├── css         # Compiled CSS files
 │   └── js          # Compiled JavaScript files
+├── .browsersyncrc  # Browser-Sync file
 ├── gulpfile.js     # Gulp task configuration
+├── index.html      # Static Files
+├── tailwind.config.js    # TailwindCSS Config file
+├── postcss.config.js     # PostCSS Config file
 └── package.json    # Project metadata and dependencies
 ```
 
