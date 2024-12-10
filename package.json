@@ -3,7 +3,23 @@
   "version": "1.0.0",
   "description": "Boilerplate for Tailwind CSS and vanilla JS project with Browsersync, SCSS and JS compilation",
   "main": "index.js",
-
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdsaifurrahmann/tailwindcss-sass-boilerplate"
+  },
+  "bugs": {
+    "url": "https://github.com/mdsaifurrahmann/tailwindcss-sass-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mdsaifurrahmann/tailwindcss-sass-boilerplate#readme",
+  "dependencies": {},
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "type": "module",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
@@ -12,9 +28,20 @@
     "scss": "gulp scss",
     "js": "gulp js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "tailwindcss",
+    "sass",
+    "boilerplate",
+    "vanilla",
+    "javascript",
+    "Codebumble",
+    "Codebumble Inc.",
+    "software",
+    "mdsaifurrahmann",
+    "tailwindcss-sass-boilerplate"
+  ],
+  "author": "Md Saifur Rahman",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "browser-sync": "^3.0.3",
