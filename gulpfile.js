@@ -69,12 +69,18 @@ function copyAssets() {
 
 // Define complex tasks
 const build = gulp.series(compileSass, compileJs, copyAssets);
+const assets = gulp.series(copyAssets);
+const javascript = gulp.series(compileJs);
+const scss = gulp.series(compileSass);
 const watch = gulp.parallel(watchFiles, browserSyncInit);
 
 // Export tasks
 exports.sass = compileSass;
 exports.js = compileJs;
+exports.assets = assets;
+exports.javascript = javascript;
+exports.scss = scss;
 exports.build = build;
 exports.watch = watch;
-exports.default = gulp.series(build, watch);
 exports.assets = copyAssets;
+exports.default = gulp.series(build, watch);

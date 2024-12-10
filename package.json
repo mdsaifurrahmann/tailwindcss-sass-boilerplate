@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Boilerplate for Tailwind CSS and vanilla JS project with Browsersync, SCSS and JS compilation",
   "main": "index.js",
+
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "assets": "gulp assets",
+    "scss": "gulp scss",
+    "js": "gulp js"
   },
   "keywords": [],
   "author": "",
