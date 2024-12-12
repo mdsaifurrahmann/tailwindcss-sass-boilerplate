@@ -57,6 +57,7 @@ function watchFiles(done) {
     gulp.watch('src/scss/**/*.scss', compileSass);
     gulp.watch('src/js/**/*.js', compileJs);
     gulp.watch('src/assets/**/*', copyAssets);
+    gulp.watch('./*.html').on('change', compileSass, compileJs, copyAssets);
     gulp.watch('./*.html').on('change', browserSync.reload);
     done();
 }
@@ -73,6 +74,7 @@ const assets = gulp.series(copyAssets);
 const javascript = gulp.series(compileJs);
 const scss = gulp.series(compileSass);
 const watch = gulp.parallel(watchFiles, browserSyncInit);
+
 
 // Export tasks
 exports.sass = compileSass;

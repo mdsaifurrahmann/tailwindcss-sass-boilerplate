@@ -1058,6 +1058,13 @@ module.exports = {
       40: '40',
       50: '50',
     },
+    extend: {
+      fontFamily: {
+        alata: ['Alata', 'serif'],
+        grandiflora: ['Grandiflora One', 'serif'],
+
+      },
+    },
   },
   plugins: [],
 }
